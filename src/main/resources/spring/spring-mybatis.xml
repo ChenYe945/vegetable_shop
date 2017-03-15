@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!-- c3p0配置项 -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${driver}"/>
+        <property name="jdbcUrl" value="${url}"/>
+        <property name="user" value="${username}"/>
+        <property name="password" value="${password}"/>
+        <property name="initialPoolSize" value="${pool.initialPoolSize}"/>
+        <property name="minPoolSize" value="${pool.minPoolSize}"/>
+        <property name="maxPoolSize" value="${pool.maxPoolSize}"/>
+        <property name="maxIdleTime" value="${pool.maxIdleTime}"/>
+        <property name="acquireIncrement" value="${pool.acquireIncrement}"/>
+    </bean>
+
+    <!-- spring整合MyBatis -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <!-- 自动扫描mapper文件 -->
+        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+    </bean>
+
+    <!--配置扫描DAO接口包,动态实现DAO接口并注入到spring容器中 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--注入sqlSessionFactory -->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <!--给出需要扫描DAO接口包 -->
+        <property name="basePackage" value="cn.zerobird.dao"/>
+    </bean>
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" scope="prototype">
+        <constructor-arg index="0" ref="sqlSessionFactory"/>
+    </bean>
+
+    <!-- 事务管理 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="add*" propagation="REQUIRED"/>
+            <tx:method name="modify*" propagation="REQUIRED"/>
+            <tx:method name="remove*" propagation="REQUIRED"/>
+            <tx:method name="find*" propagation="REQUIRED" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <aop:config>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* cn.zerobird.service..*.*(..)))"/>
+    </aop:config>
+</beans>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 线程执行器配置，用于任务注册 -->
+    <bean id="executor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+        <property name="corePoolSize" value="5"/>
+        <property name="maxPoolSize" value="10"/>
+        <property name="queueCapacity" value="20"/>
+    </bean>
+
+    <!-- 站点文章统计任务 -->
+    <bean id="siteJob" class="cn.zerobird.common.quartz.SiteJob"/>
+    <bean id="siteTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <!-- 调用的类 -->
+        <property name="targetObject" ref="siteJob"/>
+        <!-- 调用类中的方法 -->
+        <property name="targetMethod" value="testJob"/>
+        <!-- 是否同时执行 -->
+        <property name="concurrent" value="false"/>
+    </bean>
+
+    <bean id="doTimeForCountJobTask" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="siteTask"/>
+        <property name="cronExpression" value="0 0/10 * * * ?"/>
+    </bean>
+
+    <!--设置调度 总管理类 如果将lazy-init='false'那么容器启动就会执行调度程序 -->
+    <bean id="startQuertz" lazy-init="false" autowire="no"
+          class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="doTimeForCountJobTask"/>
+            </list>
+        </property>
+        <property name="taskExecutor" ref="executor"/>
+    </bean>
+
+</beans>

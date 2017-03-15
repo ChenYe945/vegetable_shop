@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.zerobird.dao.OpinionMapper" >
+  <resultMap id="BaseResultMap" type="cn.zerobird.entity.Opinion" >
+    <id column="opinion_id" property="opinionId" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="vegetable_id" property="vegetableId" jdbcType="INTEGER" />
+    <result column="opinion_text" property="opinionText" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    opinion_id, user_id, vegetable_id, opinion_text
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from opinion
+    where opinion_id = #{opinionId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from opinion
+    where opinion_id = #{opinionId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.zerobird.entity.Opinion" >
+    insert into opinion (opinion_id, user_id, vegetable_id, 
+      opinion_text)
+    values (#{opinionId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{vegetableId,jdbcType=INTEGER}, 
+      #{opinionText,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.zerobird.entity.Opinion" >
+    insert into opinion
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="opinionId != null" >
+        opinion_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="vegetableId != null" >
+        vegetable_id,
+      </if>
+      <if test="opinionText != null" >
+        opinion_text,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="opinionId != null" >
+        #{opinionId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="vegetableId != null" >
+        #{vegetableId,jdbcType=INTEGER},
+      </if>
+      <if test="opinionText != null" >
+        #{opinionText,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.zerobird.entity.Opinion" >
+    update opinion
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="vegetableId != null" >
+        vegetable_id = #{vegetableId,jdbcType=INTEGER},
+      </if>
+      <if test="opinionText != null" >
+        opinion_text = #{opinionText,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where opinion_id = #{opinionId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.zerobird.entity.Opinion" >
+    update opinion
+    set user_id = #{userId,jdbcType=INTEGER},
+      vegetable_id = #{vegetableId,jdbcType=INTEGER},
+      opinion_text = #{opinionText,jdbcType=VARCHAR}
+    where opinion_id = #{opinionId,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!--数据库驱动-->
+    <classPathEntry location="E:\maven\repository\mysql\mysql-connector-java\5.1.35\mysql-connector-java-5.1.35.jar"/>
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!--数据库链接地址账号密码-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/vegetable"
+                        userId="root" password="english299399">
+        </jdbcConnection>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+        <!--生成Model类存放位置-->
+        <javaModelGenerator targetPackage="cn.zerobird.entity" targetProject="src\main\java">
+            <property name="enableSubPackages" value="false"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!--生成映射文件存放位置-->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src\main\resources">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
+        <!--生成Dao类存放位置-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="cn.zerobird.dao" targetProject="src\main\java">
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
+        <!--生成对应表及类名-->
+        <!--<table tableName="opinion" domainObjectName="Opinion" enableCountByExample="false" enableUpdateByExample="false"-->
+        <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>-->
+        <!--<table tableName="supplier" domainObjectName="Supplier" enableCountByExample="false" enableUpdateByExample="false"-->
+        <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>-->
+        <!--<table tableName="user_type" domainObjectName="UserType" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>-->
+        <!--<table tableName="vegetable" domainObjectName="Vegetable" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>-->
+        <!--<table tableName="vegetable_produced" domainObjectName="VegetableProduced" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>-->
+        <!--<table tableName="vegetable_type" domainObjectName="VegetableType" enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>-->
+
+        <!--<table tableName="zb_user_role" domainObjectName="UserRole" enableCountByExample="false"-->
+        <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+
+    </context>
+</generatorConfiguration>

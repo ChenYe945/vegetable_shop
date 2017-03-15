@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.zerobird.dao.VegetableMapper" >
+  <resultMap id="BaseResultMap" type="cn.zerobird.entity.Vegetable" >
+    <id column="vegetable_id" property="vegetableId" jdbcType="INTEGER" />
+    <result column="vegetable_type_id" property="vegetableTypeId" jdbcType="INTEGER" />
+    <result column="vegetable_produced_id" property="vegetableProducedId" jdbcType="INTEGER" />
+    <result column="supplier_id" property="supplierId" jdbcType="INTEGER" />
+    <result column="vegetable_name" property="vegetableName" jdbcType="VARCHAR" />
+    <result column="vegetable_price" property="vegetablePrice" jdbcType="REAL" />
+    <result column="vegetable_describe" property="vegetableDescribe" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    vegetable_id, vegetable_type_id, vegetable_produced_id, supplier_id, vegetable_name, 
+    vegetable_price, vegetable_describe
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from vegetable
+    where vegetable_id = #{vegetableId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from vegetable
+    where vegetable_id = #{vegetableId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.zerobird.entity.Vegetable" >
+    insert into vegetable (vegetable_id, vegetable_type_id, vegetable_produced_id, 
+      supplier_id, vegetable_name, vegetable_price, 
+      vegetable_describe)
+    values (#{vegetableId,jdbcType=INTEGER}, #{vegetableTypeId,jdbcType=INTEGER}, #{vegetableProducedId,jdbcType=INTEGER}, 
+      #{supplierId,jdbcType=INTEGER}, #{vegetableName,jdbcType=VARCHAR}, #{vegetablePrice,jdbcType=REAL}, 
+      #{vegetableDescribe,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.zerobird.entity.Vegetable" >
+    insert into vegetable
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="vegetableId != null" >
+        vegetable_id,
+      </if>
+      <if test="vegetableTypeId != null" >
+        vegetable_type_id,
+      </if>
+      <if test="vegetableProducedId != null" >
+        vegetable_produced_id,
+      </if>
+      <if test="supplierId != null" >
+        supplier_id,
+      </if>
+      <if test="vegetableName != null" >
+        vegetable_name,
+      </if>
+      <if test="vegetablePrice != null" >
+        vegetable_price,
+      </if>
+      <if test="vegetableDescribe != null" >
+        vegetable_describe,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="vegetableId != null" >
+        #{vegetableId,jdbcType=INTEGER},
+      </if>
+      <if test="vegetableTypeId != null" >
+        #{vegetableTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="vegetableProducedId != null" >
+        #{vegetableProducedId,jdbcType=INTEGER},
+      </if>
+      <if test="supplierId != null" >
+        #{supplierId,jdbcType=INTEGER},
+      </if>
+      <if test="vegetableName != null" >
+        #{vegetableName,jdbcType=VARCHAR},
+      </if>
+      <if test="vegetablePrice != null" >
+        #{vegetablePrice,jdbcType=REAL},
+      </if>
+      <if test="vegetableDescribe != null" >
+        #{vegetableDescribe,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.zerobird.entity.Vegetable" >
+    update vegetable
+    <set >
+      <if test="vegetableTypeId != null" >
+        vegetable_type_id = #{vegetableTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="vegetableProducedId != null" >
+        vegetable_produced_id = #{vegetableProducedId,jdbcType=INTEGER},
+      </if>
+      <if test="supplierId != null" >
+        supplier_id = #{supplierId,jdbcType=INTEGER},
+      </if>
+      <if test="vegetableName != null" >
+        vegetable_name = #{vegetableName,jdbcType=VARCHAR},
+      </if>
+      <if test="vegetablePrice != null" >
+        vegetable_price = #{vegetablePrice,jdbcType=REAL},
+      </if>
+      <if test="vegetableDescribe != null" >
+        vegetable_describe = #{vegetableDescribe,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where vegetable_id = #{vegetableId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.zerobird.entity.Vegetable" >
+    update vegetable
+    set vegetable_type_id = #{vegetableTypeId,jdbcType=INTEGER},
+      vegetable_produced_id = #{vegetableProducedId,jdbcType=INTEGER},
+      supplier_id = #{supplierId,jdbcType=INTEGER},
+      vegetable_name = #{vegetableName,jdbcType=VARCHAR},
+      vegetable_price = #{vegetablePrice,jdbcType=REAL},
+      vegetable_describe = #{vegetableDescribe,jdbcType=VARCHAR}
+    where vegetable_id = #{vegetableId,jdbcType=INTEGER}
+  </update>
+</mapper>

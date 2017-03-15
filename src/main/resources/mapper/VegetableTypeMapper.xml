@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.zerobird.dao.VegetableTypeMapper" >
+  <resultMap id="BaseResultMap" type="cn.zerobird.entity.VegetableType" >
+    <id column="vegetable_type_id" property="vegetableTypeId" jdbcType="INTEGER" />
+    <result column="vegetable_type_name" property="vegetableTypeName" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    vegetable_type_id, vegetable_type_name
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from vegetable_type
+    where vegetable_type_id = #{vegetableTypeId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from vegetable_type
+    where vegetable_type_id = #{vegetableTypeId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.zerobird.entity.VegetableType" >
+    insert into vegetable_type (vegetable_type_id, vegetable_type_name
+      )
+    values (#{vegetableTypeId,jdbcType=INTEGER}, #{vegetableTypeName,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.zerobird.entity.VegetableType" >
+    insert into vegetable_type
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="vegetableTypeId != null" >
+        vegetable_type_id,
+      </if>
+      <if test="vegetableTypeName != null" >
+        vegetable_type_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="vegetableTypeId != null" >
+        #{vegetableTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="vegetableTypeName != null" >
+        #{vegetableTypeName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.zerobird.entity.VegetableType" >
+    update vegetable_type
+    <set >
+      <if test="vegetableTypeName != null" >
+        vegetable_type_name = #{vegetableTypeName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where vegetable_type_id = #{vegetableTypeId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.zerobird.entity.VegetableType" >
+    update vegetable_type
+    set vegetable_type_name = #{vegetableTypeName,jdbcType=VARCHAR}
+    where vegetable_type_id = #{vegetableTypeId,jdbcType=INTEGER}
+  </update>
+</mapper>
