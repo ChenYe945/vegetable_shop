@@ -1,11 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+﻿<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>zerobird.cn</groupId>
-    <artifactId>ZeroBird</artifactId>
+    <groupId>org.vegetable</groupId>
+    <artifactId>vegetable</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>zerobird Maven Webapp</name>
+    <name>vegetable Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -137,69 +137,10 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.4</version>
         </dependency>
-
-        <!-- 定时任务调度 -->
-        <dependency>
-            <groupId>org.quartz-scheduler</groupId>
-            <artifactId>quartz</artifactId>
-            <version>2.2.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context-support</artifactId>
-            <version>4.1.7.RELEASE</version>
-        </dependency>
-
-        <!-- freemarker模板引擎 -->
-        <dependency>
-            <groupId>org.freemarker</groupId>
-            <artifactId>freemarker</artifactId>
-            <version>2.3.23</version>
-        </dependency>
     </dependencies>
     <build>
-        <finalName>ZeroBird</finalName>
+        <finalName>vegetable</finalName>
         <plugins>
-            <!-- tomcat 插件 -->
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.2</version>
-                <configuration>
-                    <!-- 解决中文参数问题 -->
-                    <uriEncoding>UTF-8</uriEncoding>
-                    <finalName>ZeroBird</finalName>
-                    <server>tomcat7</server>
-                    <port>8080</port>
-                    <path>/</path>
-                </configuration>
-            </plugin>
-            <!-- jetty插件 -->
-            <plugin>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.3.12.v20160915</version>
-                <configuration>
-                    <!-- 扫描时间间隔 -->
-                    <scanIntervalSeconds>10</scanIntervalSeconds>
-                    <httpConnector>
-                        <!-- 配置http请求端口 -->
-                        <port>8088</port>
-                    </httpConnector>
-                    <webApp>
-                        <contextPath>/</contextPath>
-                    </webApp>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

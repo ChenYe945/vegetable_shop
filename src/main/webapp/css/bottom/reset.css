@@ -1,0 +1,45 @@
+*{
+    margin: 0 ;
+    padding: 0;
+}
+body{
+    font-size: 12px;
+}
+img{
+    border: none;
+}
+li{
+    list-style: none;
+}
+input,select,textarea{
+    outline: none;/*边框样式后面可以接是个参数outline：outline-color（规定边框的颜色）
+    outline-style（规定边框的样式） outline-width（规定边框的宽度） inherit（规定应该从父元素继承 outline 属性的设置） */
+    border: none;
+    background:none;
+}
+textarea{
+    resize: none;/*用户是否可以调整大小*/
+}
+a{
+    text-decoration: none;
+    color: #666666;
+}
+.clearfix:after{
+    content: "";display: block;clear: both;
+}
+.clearfix{
+    overflow: hidden;
+    zoom:1;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}

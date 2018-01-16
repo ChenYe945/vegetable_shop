@@ -1,0 +1,278 @@
+body{
+    background-color: #F5F5F5;
+}
+.addressContainer{
+    background: #fff;
+    width: 1100px;
+    /*height: 1000px;*/
+    margin: 0 auto;
+    padding: 20px;
+}
+.addressContainer-in{
+    width: 1000px;
+    height: 100%;
+    margin: 0px auto;
+    border: 1px solid #FBF7F7;
+    padding: 20px;
+    padding-left: 100px;
+}
+.addAddressBtn{
+    background: #F0F8E9;
+    padding: 10px;
+    width: 114px;
+    height: 30px;
+    line-height: 8px;
+    font-weight: bold;
+    border-radius: 2px;
+    border: 1px solid #BFD6AF;
+    /*color: #BFD6AF;*/
+}
+.addAddressBtn+p{
+    display: inline;
+    font-size: 0.8em;
+    color: #999;
+    margin-left: 20px;
+}
+.addAddressBtn+p>span{
+    color:#71B247
+}
+.addressMessage{
+    border: 2px solid #E6E6E6;
+    padding-left: 20px;
+    margin-top: 20px;
+    position: relative;
+
+}
+.address-title{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+.addressMessage .address-title>h4{
+    color:#666;
+    font-size: 1.17em;
+    display: inline-block;
+    /*font-weight: bolder;*/
+    font-family: "microsoft yahei";
+}
+.addressMessage ul{
+    height: 16px;
+}
+.addressMessage ul li{
+    list-style: none;
+    float: left;
+    font-size: 12px;
+
+}
+.addressMessage ul li:first-of-type{
+    color: #999;
+    text-align: right;
+    width: 70px;
+}
+.addressUpdate{
+    position:absolute;
+    right: 20px;
+    bottom: 20px;
+    color: #005EA7;
+}
+.addressUpdate:hover{
+    color: red;
+}
+.win {
+    position: absolute;
+    width: 400px;
+    height: 176px;
+    border: 1px solid #666666;
+    text-align: center;
+    font-size: 12px;
+    display: none;
+    z-index: 101;
+}
+
+
+.win_title {
+    width: 100%;
+    height: 44px;
+    padding-top: 15px;
+    background-color: #00ee00;
+    color: darkolivegreen;
+    font-weight: bolder;
+    font-size: 14px;
+    background-color: white;
+}
+
+.win_main {
+    width: 100%;
+    height: 80px;
+    padding-top: 20px;
+    color: red;
+    font-size: 14px;
+    background-color: #eae4e4;
+}
+
+.win_button {
+    width: 100%;
+    height: 50px;
+    background-color: #eae4e4;
+}
+
+.win_button input {
+    width: 80px;
+    height: 30px;
+    line-height: 13px;
+    padding: 10px;
+    border: 1px solid #00ee00;
+    margin: 0 10px;
+    background: #F0F8E9;
+
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    display: none;
+    z-index: 99;
+}
+.noAddress{
+    font-size: 16px;
+    color: red;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.display-none{
+    display: none;
+}
+.addAddressPanel{
+    position: absolute;
+    display: none;
+    z-index: 201;
+    width: 760px;
+    height: 580px;
+    font-size: 12px;
+    border: 3px solid #C4C4C4;
+    background-color: white;
+}
+.updateAddressPanel{
+    position: absolute;
+    display: none;
+    z-index: 201;
+    width: 760px;
+    height: 528px;
+    font-size: 12px;
+    border: 3px solid #C4C4C4;
+    background-color: white;
+}
+.addAddressPanel-top{
+    width: 100%;
+    height: 30px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    padding: 2px 0 0 12px;
+    border: 1px solid #C4C4C4;
+    background-color: #F3F3F3;
+}
+.addAddressPanel-main{
+    color: #999;
+    padding: 30px 25px 0 25px;
+}
+.addAddressPanel-main input{
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #CCC;
+    color: black;
+}
+.addAddressPanel-main input:focus{
+    border: 2px solid #A5C7FE;
+}
+.addAddressPanel-main span{
+    color: red;
+}
+.addAddressPanel-main ul li{
+   padding: 4px;
+}
+.address-name{
+    width: 237px;
+}
+.li-input{
+    margin-bottom: 2px;
+}
+.li-input>select{
+    height: 30px;
+    width: 70px;
+    padding: 5px;
+    color: black;
+}
+.detail-address{
+    width: 497px;
+}
+.address-phone{
+   width: 237px;;
+}
+.address-email{
+    width: 497px;
+}
+.li-input input{
+    margin-right: 10px;
+}
+.alias{
+    border-radius: 5px;
+    height: 23px !important;
+    line-height: 11px;
+}
+.alias:hover{
+    color: red;
+    border: 1px solid red;
+}
+.update-alias{
+    border-radius: 5px;
+    height: 23px !important;
+    line-height: 11px;
+}
+.update-alias:hover{
+    color: red;
+    border: 1px solid red;
+}
+.addAddressPanel-bottom{
+    padding-left:30px;
+
+}
+#undateSave{
+    padding-left:30px;
+}
+#undateSave>input{
+    height: 30px;
+    line-height: 10px;
+    width: 125px;
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #CCC;
+    background-color: #F4F3F3;
+}
+.addAddressPanel-bottom>input{
+    height: 30px;
+    line-height: 10px;
+    width: 125px;
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #CCC;
+    background-color: #F4F3F3;
+}
+#closeAddAddress{
+    cursor: pointer;
+}
+#closeAddAddress2{
+    cursor: pointer;
+}
+.address-prompt{
+    margin-left: 8px;
+    display: none;
+
+}

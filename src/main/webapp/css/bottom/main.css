@@ -1,0 +1,423 @@
+/*公用*/
+.comWidth{
+    width: 1000px;
+    margin-left:auto ;
+    margin-right: auto;
+}
+.leftArea{
+    float: left;
+}
+.rightArea{
+    float: right;
+}
+/*topBar*/
+.topBar{
+    height:31px;
+    line-height: 31px;
+}
+.collection{
+    background: url("../../images/icon/collection.png") left center no-repeat;
+    padding-left: 19px;
+    font-weight: bold;
+}
+.topBar a:hover{
+    color: red;
+}
+/*logo*/
+.logoBar{
+    background-color: #1d7ad9;
+    height: 85px;
+}
+.logo{
+    padding-left: 41px;
+    padding-top: 13px;
+}
+.search_box{
+    width: 430px;
+    padding-top: 23px;
+    padding-left: 185px;
+}
+/*.search_text{*/
+    /*width: 350px;*/
+    /*height:14px;*/
+
+    /*background-color: white;*/
+    /*line-height: 14px;*/
+    /*padding: 11px 5px 10px;*/
+    /**/
+/*}*/
+.search_text{
+    width: 350px;
+    height:35px;
+    padding: 0 5px;
+    background-color: white;
+    line-height: 35px\9;
+}
+.search_btn{
+    width: 70px;
+    height:35px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei UI";
+    background-color: #FF8C00;
+    color: white;
+}
+.shopCar{
+    width: 145px;
+    height:35px;
+    background-color: #FF8800;
+    margin-top: 23px;
+    font: 14px/35px "Microsoft YaHei UI";
+    color: white;
+    margin-right: 59px;
+}
+.shopText{
+    /*font-size: 14px;*/
+    /*font-family: "Microsoft YaHei UI";*/
+    /*line-height: 35px;*/
+    height: 100%;
+    width:87px;
+
+    border-right:1px solid #E27A00 ;
+    background: url("../images/shopIcon.jpg") 10px center no-repeat;
+    text-indent: 40px;
+}
+.shopNum{
+    width: 27px;
+    height:35px;
+    border-left: #ff9c01 solid 1px ;
+    background: url("../images/sanjiao.jpg") 33px center no-repeat;
+    text-align: right;
+    padding-right:29px ;
+}
+/*导航*/
+.navBox{
+    height: 35px;
+    background-color: #1369C0;
+    color: white;
+}
+.shopClass{
+    width: 190px;
+    position: relative;
+}
+.shopClass h3{
+    line-height: 35px;/**/
+    text-align: center;
+}
+/*.shopClass i{*/
+    /*width: 11px;*/
+    /*height: 7px;*/
+    /*overflow: hidden;*/
+    /*background: url("../images/down.jpg") left center no-repeat;*/
+    /*display: inline-block;*/
+    /*margin-left: 11px;*/
+
+/*}*/
+.nav,.shopClass h3{
+    font-family: "Microsoft YaHei UI";
+}
+.nav{
+    line-height: 35px;
+}
+.nav li{
+    float: left;
+}
+.nav a{
+    padding: 0 35px;
+    line-height: 35px;
+    display: inline-block;
+    color: white;
+}
+.nav .active{
+    background-color: #4593FD;
+}
+.shopClass_show{
+    background-color: #4593FD;
+    position: absolute;
+    left: 0;
+    top:35px;
+    width: 100%;
+    padding-bottom: 1px;
+}
+.shopClass_item{
+    padding: 13px 10px;
+    border-bottom: 1px solid #3487F2;
+    border-top: 1px solid #5AA1FE;
+    line-height: 16px;
+}
+
+/*.shopClass_item dt{*/
+    /*height:21px;*/
+    /*background: url("../images/shop_sj.jpg") right center no-repeat;*/
+    /*line-height: 1;*/
+    /*overflow: hidden;*/
+/*}*/
+.shopClass_item .b{
+    font: 14px/1 "Microsoft YaHei UI";
+}
+.shopClass_item a{
+    color: white;
+}
+/*.shopClass_item .aLink{*/
+    /*width: 48px;*/
+    /*height: 20px;*/
+    /*background: url("../images/a_link_bg.png") left center no-repeat;*/
+    /*display: inline-block;*/
+    /*text-align: center;*/
+    /*line-height: 20px;*/
+    /*text-decoration: underline;*/
+    /*font-size: 12px;*/
+/*}*/
+.shopClass_list{
+    width: 568px;
+
+    border:1px solid #ccc;
+    position: absolute;
+    left: 190px;
+    top:35px;
+
+}
+.shopList_cont{
+    padding: 2px 20px;
+}
+.shopList_item{
+    padding: 10px 0;
+    border-bottom: #cccccc solid 1px;
+
+}
+.shopList_item dt{
+    color: #4b87d9;
+    line-height: 24px;
+    font-weight: bold;
+    height: 24px;
+}
+.shopList_item dd{
+    padding-left: 68px;
+    line-height: 24px;
+    margin-top: -24px;
+
+}
+.shopList_item dd a{
+    margin-right: 12px;
+}
+.shopLink_links{
+    padding: 15px 0;
+}
+.shopLink_links a{
+    color: white;
+    background-color:#2785E6 ;
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    display: inline-block;
+    padding: 0 14px 0 8px;
+    margin-right: 10px;
+}
+/*.shopLink_links span{*/
+    /*width: 11px;*/
+    /*height:7px;*/
+    /*background: url("../images/shop_sj.jpg") left center no-repeat;*/
+    /*display: inline-block;*/
+    /*margin-left: 7px;*/
+/*}*/
+.shopClass_active{
+    background-color: white;
+    border-left: 1px solid #4593FD;
+}
+.shopClass_active a{
+    color: black;
+}
+.shopClass_active .aLink{
+    color: white;
+    text-decoration: none;
+}
+.shopClass_active dt{
+    background:none;
+}
+.shopClass_item a:hover{
+    text-decoration: underline;
+}
+.banner{
+    margin-bottom: 15px;
+}
+.banner_bar{
+    position: relative;
+    overflow: hidden;
+
+}
+.imgBox{
+    position: absolute;
+    left: 0;
+    top:0;
+
+}
+.imgBox li{
+    display: block;
+}
+.imgBox img{
+    display: block;
+}
+.banner_big,.banner_big img{
+    width: 810px;
+    height:326px;
+}
+.banner_big .imgBox{
+    width: 1620px;
+    height:326px;
+}
+.banner_sm,.banner_sm img{
+    width: 190px;
+    height:400px;
+}
+.banner_sm .imgBox{
+    width: 380px;
+    height:400px;
+}
+.imgNum{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    bottom: 15px;
+}
+.imgNum a{
+    width: 20px;
+    height: 5px;
+    background-color: white;
+    display: inline-block;
+    margin: 0 3px;
+
+}
+.imgNum .active{
+    background-color: #FF7700;
+
+}
+
+.shopTitle{
+    color: #000;
+    height: 44px;
+    line-height: 44px;
+    font-family: "Microsoft YaHei UI";
+    margin-bottom: 10px;
+
+}
+.shopTitle h3{
+    font-size: 24px;
+    font-weight: normal;
+    padding-left: 15px;
+}
+.icon{
+    width: 44px;
+    height:44px;
+    display: inline-block;
+    margin-left: 40px;
+    background: url("../../images/shopIcon.jpg") left center no-repeat;
+}
+.more{
+    font-family: "宋体";
+
+}
+.more:hover{
+    text-decoration: underline;
+}
+.shopList{
+    margin-bottom: 15px;
+}
+.shopList .leftArea{
+    width: 190px;
+}
+.shopList .rightArea{
+    width: 808px;
+    border:1px solid #999;
+    border-bottom: 3px solid #FF7201;
+    height: 396px;
+    overflow: hidden;
+}
+/*右侧商品列表*/
+.shopList_top,.shopList_sm{margin-right: -4px}
+.shop_item{
+    width: 202px;
+    border-right:1px solid #999;
+    border-bottom: 1px solid #999;
+    height: 279px;
+    text-align: center;
+    font-family: "Microsoft YaHei UI";
+    float: left;
+}
+.shop_img{
+    height: 218px;
+
+}
+.shop_img img{
+    width: 100%;
+    height: 218px;
+    display: block;
+}
+.shop_img h3{
+    font-size: 16px;
+}
+.shop_img p{
+    font-size: 14px;
+    color: #FFC28F;
+    line-height: 21px;
+}
+.shopItem_sm{
+    width: 202px;
+    border-right:1px solid #999;
+    height: 110px;
+    float: left;
+    padding-top: 6px;
+}
+.shopItem_smImg{
+    width: 95px;
+    height: 95px;
+    text-align: center;
+    float: left;
+}
+.shopItem_smImg img{
+    width: 95px;
+    height:95px;
+}
+.shopItem_text{
+    padding-top: 28px;
+    width: 100px;
+    float: left;
+
+}
+.shopItem_text p{
+    color: #FF7300;
+}
+.shopItem_text h3{
+    font-family: "Microsoft YaHei UI";
+    font-size: 16px;
+    font-weight: normal;
+    color: #181818;
+    line-height: 30px;
+}
+.footer{
+   text-align: center;
+    background-color: #D4D4D4;
+    line-height: 24px;
+    padding: 50px 0;
+    color:#000;
+    font-size: 12px;
+}
+.footer i{
+    font-style: normal;
+    margin: 0 5px;
+
+}
+.footer a{
+    color: #000;
+}
+.footer a:hover{
+    color: #FF7201;
+}
+.web{
+    padding-top: 30px;
+}
+.web img{
+    margin: 0 12px;
+}
+.hr_25{
+    height: 52px;
+}

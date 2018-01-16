@@ -1,0 +1,250 @@
+.shopCar-outContainer {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.topOf-title {
+    color: red;
+}
+
+.topOf-title > h3 {
+    font-size: 18px;
+    display: inline;
+    font-weight: bolder;
+    padding-bottom: 3px;
+    border-bottom: 2px solid red;
+}
+
+.topOf-title > .shop-count {
+    font-size: 15px;
+    padding-left: 8px;
+    font-weight: bolder;
+}
+
+.shopCar-title {
+    width: 100%;
+    height: 42px;
+    background-color: #F3F3F3;
+}
+
+.shopCar-title ul li {
+    list-style: none;
+    float: left;
+    font-size: 12px;
+    padding: 13px;
+}
+
+.shopCar-title ul li > input[type='checkbox'] {
+    margin: 0;
+    margin-right: 5px;
+}
+
+.shopCar-title-sec-li {
+    margin-left: 75px;
+}
+
+.shopCar-title-thr-li {
+    margin-left: 445px;
+}
+
+.shopCar-title-thou-li {
+    margin-left: 64px;
+    text-align: center;
+}
+
+.shopCar-title-fi-li {
+    margin-left: 100px;
+}
+
+.shopCar-title-six-li {
+    margin-left: 44px;
+}
+
+.shopCarMessage {
+    width: 100%;
+    height: 162px;
+    line-height: 40px;
+    font-size: 12px;
+    float: left;
+    margin-bottom: 10px;
+
+}
+
+.shopCarMessage > div:first-of-type {
+    width: 100%;
+    height: 40px;
+    font-weight: bolder;
+    padding-left: 14px;
+
+}
+
+.shopCarMessage > div:first-of-type > input[type='checkbox'] {
+    margin: 0;
+    margin-right: 8px;
+}
+.showCar {
+    height: 125px;
+    width: 100%;
+    border-top: 2px solid #AAA;
+    background-color: #FFF4E8;
+    padding-left: 14px;
+    padding-top: 20px;
+
+}
+
+.showCar > ul > li {
+    list-style: none;
+    float: left;
+    height: 100%;
+}
+.showCar > ul{
+    height: 100%;
+}
+
+.showCar > ul > li > img {
+    width: 82px;
+    height: 82px;
+    border: 1px solid #EEEEEE;
+}
+.showCar>ul>li:nth-of-type(2){
+    width: 207px;
+    line-height: 20px;
+    padding-left: 20px;
+}
+.showCar>ul>li:nth-of-type(2)>span{
+    color: #AAA;
+}
+.simple-price{
+    margin-left: 331px;
+    color: red;
+}
+.addAndReduce{
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    border: 1px solid #CACBCB;
+    background-color: white;
+}
+.addAndReduce+input[type='text']{
+    width: 46px;
+    height: 20px;
+    border: 1px solid #CACBCB;
+    text-align: center;
+    background-color: white;
+}
+.all-price{
+    margin-left: 84px;
+    font-weight: bolder;
+    color: red;
+}
+.delete-Current{
+    margin-left: 60px;
+}
+.shopCar-bottom{
+    width: 1200px;
+    margin: 0 auto;
+    height: 409px;
+    padding: 20px;
+    margin-top: -20px;
+
+}
+.shopCar-bottom-title{
+    width: 100%;
+    height: 52px;
+    border: 1px solid #F0F0F0;
+    padding-left: 14px;
+    color: #666666;
+    font-size: 12px;
+    line-height:52px ;
+}
+.shopCar-bottom-title>ul>li{
+    list-style: none;
+    float: left;
+    margin-right: 15px;
+}
+.shopCar-bottom-title>ul>li:nth-of-type(2){
+    margin-left: 100px;
+}
+.shopCar-bottom-title>ul>li:nth-of-type(2)>a{
+    color:#666666 ;
+}
+.shopCar-bottom-title>ul>li:nth-of-type(2)>a:hover{
+    color: red;
+}
+.shopCar-bottom-title>ul>li:nth-of-type(3){
+    margin-left: 579px;
+}
+.shopCar-bottom-title>ul>li>input[type='checkbox']{
+    margin: 0;
+    margin-right: 8px;
+}
+.shopCar-bottom-title>ul>li:last-of-type{
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    margin-top: -2px;
+}
+.shopCar-bottom-title>ul>li:last-of-type input{
+    width: 94px;
+    height: 100%;
+    background-color: red;
+    font-size: 18px;
+    color: white;
+}
+.shopCar-othorThing{
+    float: left;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 40px;
+}
+.shopCar-othorThing>ul>li{
+    list-style: none;
+    float: left;
+    margin-right: 20px;
+    font-size: 12px;
+    color: #666666;
+}
+.shopCar-othorThing>ul>li:hover{
+    color: red;
+    font-weight: bolder;
+}
+.showOther{
+    padding-left: 40px;
+    font-size: 12px;
+    color: #666666;
+    text-align: center;
+}
+.showOther>ul>li{
+    width: 246px;
+    height: 306px;
+    list-style: none;
+    float: left;
+    border: 1px dashed #CACACA;
+}
+.showOther>ul>li:hover{
+    border: 1px solid red;
+}
+.showOther>ul>li>div>ul>li>img{
+    width: 200px;
+    height: 200px;
+}
+.showOther>ul>li>div>ul>li:nth-of-type(3)>span{
+    font-size: 14px;
+    color: red;
+}
+
+.showOther>ul>li>div>ul>li:last-of-type{
+    height: 30px;
+    width: 125px;
+    margin-left: 23%;
+    margin-top: 10px;
+    border: 1px solid #999999;
+    border-radius: 2px;
+    line-height: 25px;
+}
+.addAndReduce_bcColor{
+    background-color: gainsboro;
+}

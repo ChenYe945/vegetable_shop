@@ -1,0 +1,105 @@
+.width_100{
+    width: 100%;
+}
+.pic_top_1212{
+    background-color: rgba(245, 245, 245, 0.56);
+}
+.pic_top_long{
+    width: 1200px;
+    height: 254px;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: salmon;
+}
+.pic_top_long img {
+    display: block;
+}
+.pic_top_1213{
+    background-color: #f5f5f5;
+}
+.pic_top_long2{
+    width: 1200px;
+    height: 30px;
+    background-color:#f5f5f5 ;
+    margin: 0 auto;
+    position: relative;
+}
+.dropdown_padding{
+    padding-bottom: 5px !important;
+    padding-top: 5px !important;
+    color: grey;
+}
+.pic_top_long2_firstDiv{
+    float: left;
+    line-height: 30px;
+    padding-left: 3px;
+
+
+}
+.fontSizeAndColor{
+    font-size: 0.8em;
+    color: #666;
+}
+.pic_top_long2_sedDiv{
+    width: 800px;
+    position: absolute;
+    right: 0;
+}
+#navigationBar a:link {
+    color: #666;
+}
+#webNavigate{
+    list-style: none;
+    float: left;
+    width: 100%;
+
+    text-align: center;
+
+}
+#webNavigate li{
+    float: left;
+    padding:0;
+}
+.headerSearchBox{
+    position: absolute;
+    z-index: 100;
+    bottom: 50px;
+    width: 420px;
+    left: 50%;
+    margin-left: -215px;
+}
+input{
+    border: none;
+    outline: none;
+    background:none;
+}
+.re_class{
+    position: relative;
+}
+#search{
+    width: 350px;
+    height:35px;
+    padding: 0 5px;
+    background-color: white;
+    line-height: 35px\9;
+}
+.headerSearch_btn{
+    width: 70px;
+    height:35px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei UI";
+    background-color: #FF8C00;
+    color: white;
+
+}
+
+.nav a{
+    padding: 0 16px;
+    line-height: 30px;
+    display: inline-block;
+    /*color: white;*/
+}
+.nav .active{
+    background-color: #c1e6e5;
+    color: white;
+}

@@ -1,0 +1,221 @@
+body{
+    background-color: #f5f5f5;
+}
+.balance-outContainer{
+    width: 1185px;
+    height: auto;
+    margin: 0 auto;
+    font-size: 12px;
+    background-color: white;
+    padding: 0 200px ;
+}
+.show-title{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #DEE9EF;
+    padding-left: 20px;
+}
+.show-title>span{
+    float: right;
+    padding-right: 125px;
+}
+.balance-message{
+    width: 100%;
+    height: 104px;
+    background-color: #D9E2E9;
+    padding: 20px 20px 0;
+    position: relative;
+}
+.balance-other-message{
+    width: 80%;
+    height: 30px;
+}
+.all-balance{
+    font-size: 18px;
+    width: 80%;
+}
+.balance-other-message>ul>li {
+    list-style: none;
+    float: left;
+    margin-right: 40px;
+    height: 20px;
+    line-height: 20px;
+
+}
+
+.btn-container{
+    float: right;
+    position: absolute;
+    right: 129px;
+    top: 8px;
+
+}
+.btn-container input{
+    border: 1px solid #C2C2C2;
+    background-color: #EEF8E7;
+    font-size: 12px;
+    width: 55px;
+    height: 24px;
+    border-radius: 2px;
+}
+
+.btn-container>ul>li{
+    margin-bottom: 10px;
+}
+.btn-container>ul>li:first-of-type>input{
+    margin-right: 20px;
+}
+.btn-container>ul>li:first-of-type>input:hover{
+    background-color: rgba(238,248,231,0.74);
+}
+.btn-container>ul>li:last-of-type>input{
+    width: 130px;
+    height: 30px;
+    line-height: 25px;
+    background-color: #f10180;
+    border: 1px solid #f10180;
+    color: white;
+}
+.btn-container>ul>li:last-of-type>input:hover{
+    background-color: rgba(241,1,128,0.74);
+}
+.trading-record-container{
+    width: 100%;
+    height: auto;
+
+}
+.trading-record-container ul{
+    margin: 0;
+}
+.record-title{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    background-color: #F9F9F9;
+    border: 1px solid #E5E5E5;
+    margin-top: 25px;
+    padding-left: 20px;
+}
+.record-main-title{
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    background: #f5f8fa;
+    border-bottom: 1px solid #f2f2f2;
+}
+.record-main-title>ul>li{
+    list-style: none;
+    float: left;
+    width: 25%;
+    text-align: center;
+    /*margin-left: 50px;*/
+    /*margin-right: 88px;*/
+}
+.record-message{
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+    border: 1px solid #f2f2f2;
+}
+.record-message img{
+    margin: 70px auto;
+    display: flex;
+}
+.record-message p{
+    text-align: center;
+}
+.record-message>ul>li{
+    list-style: none;
+    float: left;
+    width: 25%;
+    text-align: center;
+
+
+}
+.record-message>ul{
+    height: 30px;
+    padding: 5px 0;
+    border: 1px solid #EFF0F4;
+
+}
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    display: none;
+    z-index: 99;
+}
+.recharge {
+    position: absolute;
+    width: 400px;
+    height: 220px;
+    border: 1px solid #666666;
+    font-size: 12px;
+    display: none;
+    z-index: 201;
+    background-color: white;
+}
+.recharge-title{
+    width: 100%;
+    height: 30px;
+    background-color: #F9F9F9;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: orangered;
+}
+.recharge-message{
+    width: 100%;
+    height: auto;
+}
+.recharge-message>ul{
+    width: 100%;
+}
+.recharge-message>ul>li{
+    list-style: none;
+    float: left;
+    width: 100%;
+}
+.recharge-message>ul>li>ul>li{
+    list-style: none;
+    float: left;
+    height: 34px;
+    line-height: 34px;
+}
+.lastBalance{
+    font-size: 16px;
+    color: orchid;
+}
+.recharge-label{
+    color: #C2C2C2;
+    width: 35%;
+    text-align: right;
+}
+.recharge-message input{
+    border: 1px solid #C2C2C2;
+    width: 136px;
+    height: 30px;
+    padding: 5px;
+    line-height: 30px;
+}
+.recharge-save{
+    width: 100%;
+    text-align: center;
+}
+.recharge-save input{
+    width: 65px;
+    height: 30px;
+    border: 1px solid #C2C2C2;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 2px;
+    line-height: 27px;
+    background-color: #FAFAFA;
+}

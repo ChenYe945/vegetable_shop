@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.ssm.dao.TradingMapper" >
+  <resultMap id="BaseResultMap" type="org.ssm.entity.Trading" >
+    <id column="trading__id" property="tradingId" jdbcType="INTEGER" />
+    <result column="trading_type" property="tradingType" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="trading_time" property="tradingTime" jdbcType="DATE" />
+    <result column="trading_balace" property="tradingBalace" jdbcType="REAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    trading__id, trading_type, user_id, trading_time, trading_balace
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from trading
+    where trading__id = #{tradingId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from trading
+    where trading__id = #{tradingId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.ssm.entity.Trading" >
+    insert into trading (trading__id, trading_type, user_id, 
+      trading_time, trading_balace)
+    values (#{tradingId,jdbcType=INTEGER}, #{tradingType,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, 
+      #{tradingTime,jdbcType=DATE}, #{tradingBalace,jdbcType=REAL})
+  </insert>
+  <insert id="insertSelective" parameterType="org.ssm.entity.Trading" >
+    insert into trading
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="tradingId != null" >
+        trading__id,
+      </if>
+      <if test="tradingType != null" >
+        trading_type,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="tradingTime != null" >
+        trading_time,
+      </if>
+      <if test="tradingBalace != null" >
+        trading_balace,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="tradingId != null" >
+        #{tradingId,jdbcType=INTEGER},
+      </if>
+      <if test="tradingType != null" >
+        #{tradingType,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="tradingTime != null" >
+        #{tradingTime,jdbcType=DATE},
+      </if>
+      <if test="tradingBalace != null" >
+        #{tradingBalace,jdbcType=REAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.ssm.entity.Trading" >
+    update trading
+    <set >
+      <if test="tradingType != null" >
+        trading_type = #{tradingType,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="tradingTime != null" >
+        trading_time = #{tradingTime,jdbcType=DATE},
+      </if>
+      <if test="tradingBalace != null" >
+        trading_balace = #{tradingBalace,jdbcType=REAL},
+      </if>
+    </set>
+    where trading__id = #{tradingId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.ssm.entity.Trading" >
+    update trading
+    set trading_type = #{tradingType,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=INTEGER},
+      trading_time = #{tradingTime,jdbcType=DATE},
+      trading_balace = #{tradingBalace,jdbcType=REAL}
+    where trading__id = #{tradingId,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,149 @@
+body {
+    background-color: rgb(244, 244, 244);
+}
+
+.personalInformation_container_out {
+    width: 900px;
+    height: 700px;
+    margin: 20px auto;
+    background: #fff;
+    font-family: "Microsoft YaHei UI";
+    position: relative;
+}
+
+.personalInformation_container_inForBase {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    padding: 20px 10px;
+}
+
+.personalInformation_container_title {
+    width: 100%;
+
+}
+
+.personalInformation_container_title h4 {
+    font-size: 15px;
+    color: red;
+}
+
+.personalInformation_container_main {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+
+}
+
+.personalInformation_container_main input {
+    border: 1px solid #ccc;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    padding:2px;
+    padding-left: 4px;
+}
+
+.message {
+    width: 100%;
+    height: 25px;
+    vertical-align: middle;
+    margin: 20px 0;
+
+}
+
+.message li {
+    list-style: none;
+    float: left;
+}
+
+.message li:first-of-type {
+    font-size: 12px;
+    text-align: right;
+    width: 76px;
+    height: 30px;
+    line-height: 30px;
+
+}
+
+.loved {
+    width: 420px;
+    height: 200px;
+    margin-left: 65px;
+
+}
+
+.loved ul li {
+    list-style: none;
+    float: left;
+    border: 1px solid #ccc;
+    margin: 7px;
+    padding: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.message .forHeight {
+    line-height: 30px;
+    height: 30px;
+}
+
+.smallPanel {
+    width: 320px;
+    height: 145px;
+    position: absolute;
+    top: 73px;
+    right: 50px;
+    padding: 10px;
+
+}
+
+.smallPanelForShow {
+    width: 304px;
+    height: 125px;
+    border: 1px solid #CCC;
+
+}
+
+.smallPanelForShow img {
+    border-radius: 50%;
+    line-height: 125px;
+    padding: 10px 15px;
+}
+
+.smallPanel .zhu {
+    font-size: 12px;
+    text-align: right;
+}
+
+.zhu a:link {
+    color: blue;
+}
+
+.zhu a:visited {
+    color: blue;
+}
+
+.smallPanelForShow div {
+    float: right;
+    font-size: 12px;
+    margin: 30px 17px 0 0;
+}
+.smallPanelForShow div ul li{
+    height: 22px;
+    line-height: 17px;
+}
+.submit{
+    width: 60%;
+    margin-left: 19%;
+    margin-top: -10px;
+}
+#submitMessage{
+    border: 1px solid #CCC;
+    font-size: 12px;
+    padding: 1px 12px;
+    background: #eff8e8;
+}
+.changeBorderColor{
+    border: 1px solid red !important;
+}

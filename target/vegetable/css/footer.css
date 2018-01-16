@@ -1,0 +1,28 @@
+.footer{
+    text-align: center;
+    background-color: #D4D4D4;
+    line-height: 24px;
+    padding: 50px 0;
+    color:#000;
+    font-size: 12px;
+}
+.footer i{
+    font-style: normal;
+    margin: 0 5px;
+
+}
+.footer a{
+    color: #000;
+}
+.footer a:hover{
+    color: #FF7201;
+}
+.web{
+    padding-top: 0;
+}
+.web img{
+    margin: 0 12px;
+}
+.hr_25{
+    height: 52px;
+}
